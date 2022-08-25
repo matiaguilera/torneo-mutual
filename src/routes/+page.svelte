@@ -1,2 +1,9 @@
-<h1 class="bg-red-900">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Information from './Information.svelte';
+
+	export let data;
+
+	let { leagueData } = data;
+</script>
+
+<Information {leagueData} />

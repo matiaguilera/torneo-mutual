@@ -7,3 +7,11 @@ declare namespace App {
 	// interface PrivateEnv {}
 	// interface PublicEnv {}
 }
+
+type Tag = { name: string; url: string };
+
+declare namespace svelte.JSX {
+	interface HTMLAttributes<T> {
+		onoutclick?: () => void;
+	}
+}
