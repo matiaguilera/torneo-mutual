@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Goal {
+  id                         Int    @id @default(autoincrement())
+  leagueId                   Int
+  matchId                    Int
+  playerId                   Int
+  teamId                     Int
+  receiverId                 Int
+  quantity                   Int    @default(0)
+  League                     League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  Match                      Match  @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  Player                     Player @relation(fields: [playerId], references: [id])
+  Team_Goal_receiverIdToTeam Team   @relation("Goal_receiverIdToTeam", fields: [receiverId], references: [id])
+  Team_Goal_teamIdToTeam     Team   @relation("Goal_teamIdToTeam", fields: [teamId], references: [id])
+}
+
+model League {
+  id     Int      @id @default(autoincrement())
+  name   String
+  status String   @default("Active")
+  Goal   Goal[]
+  Match  Match[]
+  Player Player[]
+  Team   Team[]
+}
+
+model Match {
+  id                      Int    @id @default(autoincrement())
+  leagueId                Int
+  homeId                  Int
+  awayId                  Int
+  result                  Int    @default(-1)
+  status                  String @default("Pendant")
+  matchday                Int
+  date                    String @default("2022-03-17T19:00:00Z")
+  Team_Match_awayIdToTeam Team   @relation("Match_awayIdToTeam", fields: [awayId], references: [id])
+  Team_Match_homeIdToTeam Team   @relation("Match_homeIdToTeam", fields: [homeId], references: [id])
+  League                  League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  Goal                    Goal[]
+}
+
+model Player {
+  id       Int    @id @default(autoincrement())
+  name     String
+  lastName String
+  number   Int
+  leagueId Int
+  teamId   Int
+  League   League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  Team     Team   @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  Goal     Goal[]
+}
+
+model Team {
+  id                         Int      @id @default(autoincrement())
+  name                       String
+  leagueId                   Int
+  League                     League   @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  Goal_Goal_receiverIdToTeam Goal[]   @relation("Goal_receiverIdToTeam")
+  Goal_Goal_teamIdToTeam     Goal[]   @relation("Goal_teamIdToTeam")
+  Match_Match_awayIdToTeam   Match[]  @relation("Match_awayIdToTeam")
+  Match_Match_homeIdToTeam   Match[]  @relation("Match_homeIdToTeam")
+  Player                     Player[]
+}
