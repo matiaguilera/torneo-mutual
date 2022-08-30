@@ -7,44 +7,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Goal {
-  id                         Int    @id @default(autoincrement())
-  leagueId                   Int
-  matchId                    Int
-  playerId                   Int
-  teamId                     Int
-  receiverId                 Int
-  quantity                   Int    @default(0)
-  League                     League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  Match                      Match  @relation(fields: [matchId], references: [id], onDelete: Cascade)
-  Player                     Player @relation(fields: [playerId], references: [id])
-  Team_Goal_receiverIdToTeam Team   @relation("Goal_receiverIdToTeam", fields: [receiverId], references: [id])
-  Team_Goal_teamIdToTeam     Team   @relation("Goal_teamIdToTeam", fields: [teamId], references: [id])
-}
-
 model League {
-  id     Int      @id @default(autoincrement())
-  name   String
-  status String   @default("Active")
-  Goal   Goal[]
-  Match  Match[]
-  Player Player[]
-  Team   Team[]
+  id      Int      @id @default(autoincrement())
+  name    String
+  status  String   @default("Active")
+  teams   Team[]
+  matches Match[]
+  players Player[]
+  goals   Goal[]
 }
 
-model Match {
-  id                      Int    @id @default(autoincrement())
-  leagueId                Int
-  homeId                  Int
-  awayId                  Int
-  result                  Int    @default(-1)
-  status                  String @default("Pendant")
-  matchday                Int
-  date                    String @default("2022-03-17T19:00:00Z")
-  Team_Match_awayIdToTeam Team   @relation("Match_awayIdToTeam", fields: [awayId], references: [id])
-  Team_Match_homeIdToTeam Team   @relation("Match_homeIdToTeam", fields: [homeId], references: [id])
-  League                  League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  Goal                    Goal[]
+model Team {
+  id             Int      @id @default(autoincrement())
+  name           String
+  league         League   @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  leagueId       Int
+  players        Player[]
+  matchesAsTeam1 Match[]  @relation("team1")
+  matchesAsTeam2 Match[]  @relation("team2")
+  goalsInFavor   Goal[]   @relation("scorer")
+  goalsAgainst   Goal[]   @relation("receiver")
 }
 
 model Player {
@@ -52,21 +34,39 @@ model Player {
   name     String
   lastName String
   number   Int
+  league   League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
   leagueId Int
+  team     Team   @relation(fields: [teamId], references: [id], onDelete: Cascade)
   teamId   Int
-  League   League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  Team     Team   @relation(fields: [teamId], references: [id], onDelete: Cascade)
-  Goal     Goal[]
+  goals    Goal[]
 }
 
-model Team {
-  id                         Int      @id @default(autoincrement())
-  name                       String
-  leagueId                   Int
-  League                     League   @relation(fields: [leagueId], references: [id], onDelete: Cascade)
-  Goal_Goal_receiverIdToTeam Goal[]   @relation("Goal_receiverIdToTeam")
-  Goal_Goal_teamIdToTeam     Goal[]   @relation("Goal_teamIdToTeam")
-  Match_Match_awayIdToTeam   Match[]  @relation("Match_awayIdToTeam")
-  Match_Match_homeIdToTeam   Match[]  @relation("Match_homeIdToTeam")
-  Player                     Player[]
+model Match {
+  id       Int    @id @default(autoincrement())
+  league   League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  leagueId Int
+  homeId   Int
+  awayId   Int
+  home     Team   @relation("team1", fields: [homeId], references: [id])
+  away     Team   @relation("team2", fields: [awayId], references: [id])
+  goals    Goal[]
+  result   Int    @default(-1) //Pendant: -1, Draw: 0, otherwise winner team id  
+  status   String @default("Pendant")
+  matchday Int
+  date     String @default("2022-03-17T19:00:00Z")
+}
+
+model Goal {
+  id         Int    @id @default(autoincrement())
+  league     League @relation(fields: [leagueId], references: [id], onDelete: Cascade)
+  leagueId   Int
+  match      Match  @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  matchId    Int
+  player     Player @relation(fields: [playerId], references: [id])
+  playerId   Int
+  team       Team   @relation("scorer", fields: [teamId], references: [id])
+  teamId     Int
+  receiver   Team   @relation("receiver", fields: [receiverId], references: [id])
+  receiverId Int
+  quantity   Int    @default(0)
 }

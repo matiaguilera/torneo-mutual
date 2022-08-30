@@ -10,6 +10,14 @@ declare namespace App {
 
 type Tag = { name: string; url: string };
 
+type Team = import('@prisma/client').Team;
+
+type Goal = import('@prisma/client').Goal;
+
+interface GoalWithPlayer extends Goal {
+	player: Player;
+}
+
 declare namespace svelte.JSX {
 	interface HTMLAttributes<T> {
 		onoutclick?: () => void;
