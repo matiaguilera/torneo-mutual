@@ -18,6 +18,24 @@ interface GoalWithPlayer extends Goal {
 	player: Player;
 }
 
+type Standing = {
+	name: string;
+	mp: number;
+	w: number;
+	d: number;
+	l: number;
+	gf: number;
+	ga: number;
+	gd: number;
+	pts: number;
+};
+
+type Scorer = {
+	name: string;
+	lastName: string;
+	sum: number;
+};
+
 declare namespace svelte.JSX {
 	interface HTMLAttributes<T> {
 		onoutclick?: () => void;
