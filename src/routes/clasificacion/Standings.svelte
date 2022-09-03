@@ -8,14 +8,14 @@
 			<thead>
 				<tr class="text-gray-500 text-sm bg-gray-50">
 					<th class="hidden sm:table-cell font-semibold">Pos</th>
-					<th class="text-left px-4 font-semibold py-2">Club</th>
-					<th class="hidden sm:table-cell font-semibold">MP</th>
-					<th class="font-semibold">W</th>
-					<th class="font-semibold">D</th>
-					<th class="font-semibold">L</th>
+					<th class="text-left px-4 font-semibold py-2">Equipo</th>
+					<th class="hidden sm:table-cell font-semibold">PJ</th>
+					<th class="font-semibold">G</th>
+					<th class="font-semibold">P</th>
+					<th class="font-semibold">E</th>
 					<th class="hidden sm:table-cell font-semibold">GF</th>
-					<th class="hidden sm:table-cell font-semibold ">GA</th>
-					<th class="font-semibold">GD</th>
+					<th class="hidden sm:table-cell font-semibold ">GC</th>
+					<th class="font-semibold">DG</th>
 					<th class="font-semibold">Pts</th>
 				</tr>
 			</thead>

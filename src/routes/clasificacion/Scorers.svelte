@@ -8,8 +8,8 @@
 			<thead>
 				<tr class="bg-gray-50 text-sm text-gray-500">
 					<th class="font-semibold">Pos</th>
-					<th class="px-4 py-2 text-left font-semibold">Player</th>
-					<th class="font-semibold pr-4">Goals</th>
+					<th class="px-4 py-2 text-left font-semibold">Jugador</th>
+					<th class="font-semibold pr-4">Goles</th>
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-gray-200">
