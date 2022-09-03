@@ -53,7 +53,7 @@
 					on:focus={() => (active[index] = true)}
 					on:blur={() => (active[index] = false)}
 					class={`relative pl-10 ${
-						active[index] ? 'text-indigo-900 bg-indigo-100' : 'text-gray-900'
+						active[index] ? 'text-stone-900 bg-stone-100' : 'text-gray-900'
 					}`}
 				>
 					<a href={tag.url} on:click={(e) => handleClick(index)} class="block py-2 cursor-default">
@@ -61,7 +61,7 @@
 							{tag.name}
 						</span>
 						{#if index === selected}
-							<span class="absolute inset-y-0 left-3 flex items-center text-indigo-600">
+							<span class="absolute inset-y-0 left-3 flex items-center text-stone-600">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="h-5 w-5"
