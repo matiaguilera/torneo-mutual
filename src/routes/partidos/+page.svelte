@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Scoreboard from './Scoreboard.svelte';
+	import Scoreboard from './[mid]/Scoreboard.svelte';
 
 	export let data;
 

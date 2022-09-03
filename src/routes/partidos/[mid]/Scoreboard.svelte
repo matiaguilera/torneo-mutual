@@ -16,7 +16,13 @@
 >
 	<div class="basis-1/4 text-center">
 		<div>
-			<img width={48} height={48} alt="Team logo" class="m-auto" src="/team.png" />
+			<img
+				width={48}
+				height={48}
+				alt="Team logo"
+				class="m-auto"
+				src={home.code !== 'ESP' ? `/${home.code}.webp` : `/${home.code}.jpg`}
+			/>
 		</div>
 		<p class="whitespace-nowrap">{home.name}</p>
 	</div>
@@ -27,7 +33,13 @@
 	</div>
 	<div class="basis-1/4 text-center">
 		<div>
-			<img width={48} height={48} alt="Team logo" class="m-auto" src="/team.png" />
+			<img
+				width={48}
+				height={48}
+				alt="Team logo"
+				class="m-auto"
+				src={away.code !== 'ESP' ? `/${away.code}.webp` : `/${away.code}.jpg`}
+			/>
 		</div>
 		<p class="whitespace-nowrap">{away.name}</p>
 	</div>
