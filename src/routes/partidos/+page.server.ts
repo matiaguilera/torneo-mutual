@@ -7,21 +7,8 @@ export const load: PageServerLoad = async () => {
 			leagueId: 1
 		},
 		include: {
-			home: {
-				include: {
-					players: true
-				}
-			},
-			away: {
-				include: {
-					players: true
-				}
-			},
-			goals: {
-				include: {
-					player: true
-				}
-			}
+			home: true,
+			away: true
 		}
 	});
 	return { matches };
