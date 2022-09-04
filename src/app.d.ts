@@ -8,14 +8,47 @@ declare namespace App {
 	// interface PublicEnv {}
 }
 
+type League = import('@prisma/client').League;
+type Team = import('@prisma/client').Team;
+type Player = import('@prisma/client').Player;
+type Goal = import('@prisma/client').Goal;
+type Match = import('@prisma/client').Match;
+
 type Tag = { name: string; url: string };
 
-type Team = import('@prisma/client').Team;
+interface MatchWithTeams extends Match {
+	home: Team;
+	away: Team;
+}
 
-type Goal = import('@prisma/client').Goal;
+interface TeamWithPlayers extends Team {
+	players: Player[];
+}
+
+interface MatchWithTeamsAndPlayers extends MatchWithTeams {
+	home: TeamWithPlayers;
+	away: TeamWithPlayers;
+}
 
 interface GoalWithPlayer extends Goal {
 	player: Player;
+}
+
+type GoalWithoutId = {
+	leagueId: number;
+	matchId: number;
+	teamId: number;
+	receiverId: number;
+	playerId: number;
+};
+
+interface MatchWithTeamsPlayersGoals extends MatchWithTeamsAndPlayers {
+	goals: GoalWithPlayer[];
+}
+
+interface LeagueForMatches extends League {
+	teams: Team[];
+	matches: MatchWithTeamsPlayersGoals[];
 }
 
 type Standing = {
