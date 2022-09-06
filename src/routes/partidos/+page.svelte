@@ -8,13 +8,11 @@
 
 {#if matches.length > 0}
 	<div class="flex justify-center my-5">
-		<div class="grid md:grid-cols-2 gap-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each matches as { id, home, away, matchday }, index}
 				{#if index % 4 === 0}
-					<div class="col-span-2">
-						<div>
-							<p class="text-gray-800">Jornada {matchday} de 7</p>
-						</div>
+					<div class="md:col-span-2 bg-slate-100 border-y">
+						<p class="text-black pl-2">Jornada {matchday} de 7</p>
 					</div>
 				{/if}
 				<MatchCard {id} {home} {away} />

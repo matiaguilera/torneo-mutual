@@ -4,7 +4,7 @@
 </script>
 
 <a
-	class="py-2 px-4 shadow-sm text-sm font-medium rounded-md text-white bg-stone-600 hover:bg-stone-700 focus:ring-2 focus:ring-offset-2 focus:ring-stone-500"
+	class="py-2 px-4 shadow-sm text-sm font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 focus:ring-2 focus:ring-offset-2 focus:ring-slate-500"
 	{href}
 >
 	{name}

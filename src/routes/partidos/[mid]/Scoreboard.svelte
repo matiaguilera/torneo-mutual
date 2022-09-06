@@ -49,64 +49,30 @@
 			<p class="whitespace-nowrap">{away.name}</p>
 		</div>
 	</div>
-	{#if goals.length > 0}
-		<hr class="pt-5" />
-		<div class="flex justify-between pt-5">
-			<div>
-				<ul>
-					<li>Luke Thomas</li>
-					<li>Moisés Caicedo</li>
-					<li>Leandro Trossard</li>
-				</ul>
-			</div>
-			<div>
-				<img
-					width={24}
-					height={24}
-					alt="Ilustración de pelota de fútbol"
-					src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
-				/>
-			</div>
-			<div>
-				<ul class="text-right">
-					<li>Kalechi Iheanacho</li>
-					<li>Patson Daka</li>
-				</ul>
-			</div>
+	<!-- {#if goals.length > 0} -->
+	<hr class="pt-5" />
+	<div class="flex justify-between pt-5">
+		<div>
+			<ul>
+				<li>Luke Thomas</li>
+				<li>Moisés Caicedo</li>
+				<li>Leandro Trossard</li>
+			</ul>
 		</div>
-	{/if}
+		<div>
+			<img
+				width={24}
+				height={24}
+				alt="Ilustración de pelota de fútbol"
+				src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
+			/>
+		</div>
+		<div>
+			<ul class="text-right">
+				<li>Kalechi Iheanacho</li>
+				<li>Patson Daka</li>
+			</ul>
+		</div>
+	</div>
+	<!-- {/if} -->
 </div>
-
-<!-- <div
-	class="flex items-center justify-between text-sm text-gray-700 mt-5 p-5 sm:w-2/3 sm:max-w-xl border rounded-lg shadow m-auto overflow-auto"
->
-	<div class="basis-1/4 text-center">
-		<div>
-			<img
-				width={48}
-				height={48}
-				alt="Team logo"
-				class="m-auto"
-				src={home.code !== 'ESP' ? `/${home.code}.webp` : `/${home.code}.jpg`}
-			/>
-		</div>
-		<p class="whitespace-nowrap">{home.name}</p>
-	</div>
-	<div class="font-medium text-3xl mb-5 flex justify-between basis-1/3 text-black">
-		<div>{homeGoals}</div>
-		<div>-</div>
-		<div>{awayGoals}</div>
-	</div>
-	<div class="basis-1/4 text-center">
-		<div>
-			<img
-				width={48}
-				height={48}
-				alt="Team logo"
-				class="m-auto"
-				src={away.code !== 'ESP' ? `/${away.code}.webp` : `/${away.code}.jpg`}
-			/>
-		</div>
-		<p class="whitespace-nowrap">{away.name}</p>
-	</div>
-</div> -->

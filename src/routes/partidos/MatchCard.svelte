@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+
 	export let id: number, home: Team, away: Team;
 </script>
 
-<a
-	href={`/partidos/${id}`}
-	class="flex justify-between items-center h-28 w-96 cursor-pointer border hover:bg-gray-100"
+<div
+	on:click={() => goto(`/partidos/${id}`)}
+	class="flex justify-between items-center h-28 sm:w-96 w-screen cursor-pointer border hover:bg-gray-100 overflow-auto"
 >
 	<div class="flex flex-col justify-center">
 		<div class="flex h-8">
@@ -32,8 +34,8 @@
 			{away.name}
 		</div>
 	</div>
-	<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
+	<div class="hidden md:flex flex-col w-28 h-20 justify-center items-center border-l">
 		<div>Sáb, 10/9</div>
 		<div>07:30</div>
 	</div>
-</a>
+</div>

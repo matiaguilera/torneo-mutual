@@ -11,14 +11,14 @@
 			href={tag.url}
 			on:click={(e) => handleClick(index)}
 			class={`${
-				index === selected ? 'text-stone-700' : 'text-gray-600 py-3 hover:text-stone-700'
+				index === selected ? 'text-slate-700' : 'text-gray-600 py-3 hover:text-slate-700'
 			} text-sm mx-6 py-3 z-10`}
 		>
 			<div class="flex items-center mb-3">
 				<span class="ml-1 font-normal">{tag.name}</span>
 			</div>
 			{#if index === selected}
-				<div class="w-full h-1 bg-stone-700 rounded-t-md" />
+				<div class="w-full h-1 bg-slate-700 rounded-t-md" />
 			{/if}
 		</a>
 	{/each}
