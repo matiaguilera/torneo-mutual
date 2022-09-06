@@ -16,6 +16,6 @@
 	</div>
 {:else}
 	<div class="flex items-center justify-center mt-10">
-		<p class="text-gray-600">Próximamente</p>
+		<p class="text-gray-600">Aún no se han registrado jugadores...</p>
 	</div>
 {/if}

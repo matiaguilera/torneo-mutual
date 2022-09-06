@@ -49,30 +49,30 @@
 			<p class="whitespace-nowrap">{away.name}</p>
 		</div>
 	</div>
-	{#if goals.length > 0}
-		<hr class="pt-5" />
-		<div class="flex justify-between pt-5">
-			<div>
-				<ul>
-					<li>Luke Thomas</li>
-					<li>Moisés Caicedo</li>
-					<li>Leandro Trossard</li>
-				</ul>
-			</div>
-			<div>
-				<img
-					width={24}
-					height={24}
-					alt="Ilustración de pelota de fútbol"
-					src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
-				/>
-			</div>
-			<div>
-				<ul class="text-right">
-					<li>Kalechi Iheanacho</li>
-					<li>Patson Daka</li>
-				</ul>
-			</div>
+	<!-- {#if goals.length > 0} -->
+	<hr class="pt-5" />
+	<div class="flex justify-between pt-5">
+		<div>
+			<ul>
+				<li>Luke Thomas</li>
+				<li>Moisés Caicedo</li>
+				<li>Leandro Trossard</li>
+			</ul>
 		</div>
-	{/if}
+		<div>
+			<img
+				width={24}
+				height={24}
+				alt="Ilustración de pelota de fútbol"
+				src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
+			/>
+		</div>
+		<div>
+			<ul class="text-right">
+				<li>Kalechi Iheanacho</li>
+				<li>Patson Daka</li>
+			</ul>
+		</div>
+	</div>
+	<!-- {/if} -->
 </div>
