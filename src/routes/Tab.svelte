@@ -13,7 +13,8 @@
 		{ name: 'Información', url: '/' },
 		{ name: 'Equipos', url: '/equipos' },
 		{ name: 'Partidos', url: '/partidos' },
-		{ name: 'Clasificación', url: '/clasificacion' }
+		{ name: 'Clasificación', url: '/clasificacion' },
+		{ name: 'Fase final', url: '/finales' }
 	];
 
 	const regexUrl = /\/(\w+)?/;
