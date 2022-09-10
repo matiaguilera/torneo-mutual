@@ -4,24 +4,20 @@
 	export let tid: number, name: string, code: string;
 </script>
 
-<div class="md:w-4/12 md:mx-7 mb-7 p-6 shadow rounded">
-	<div class="flex items-center border-b border-gray-200 pb-6">
+<div
+	class="flex sm:flex-col justify-between my-2 sm:m-7 w-full sm:w-44 rounded p-5 shadow overflow-auto"
+>
+	<div class="flex sm:flex-col items-center sm:border-b border-gray-200">
 		<img
 			class="mx-3"
-			src={code !== 'ESP' ? `/${code}.webp` : `/${code}.jpg`}
+			src={`/${code}.${code !== 'ESP' ? 'webp' : 'jpg'}`}
 			alt="Team logo"
 			width={48}
 			height={48}
 		/>
-		<div class="flex items-start justify-between w-full">
-			<div class="pl-3 w-full">
-				<p class="text-xl font-medium leading-5 text-gray-800">
-					{name}
-				</p>
-			</div>
-		</div>
+		<span class="text-xl font-medium text-gray-800 py-2">{name}</span>
 	</div>
-	<div class="flex px-2 pt-4 gap-3">
-		<LinkButton name="Jugadores" href={`/equipos/${tid}`} />
+	<div class="flex justify-center items-center pt-1 sm:pt-3">
+		<LinkButton name="Plantilla" href={`/equipos/${tid}`} />
 	</div>
 </div>

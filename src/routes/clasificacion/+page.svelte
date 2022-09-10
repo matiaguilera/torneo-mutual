@@ -8,6 +8,7 @@
 
 	const emptyStandings = [
 		{
+			code: 'GER',
 			name: 'Alemania',
 			mp: 0,
 			w: 0,
@@ -19,6 +20,7 @@
 			pts: 0
 		},
 		{
+			code: 'ARG',
 			name: 'Argentina',
 			mp: 0,
 			w: 0,
@@ -30,6 +32,7 @@
 			pts: 0
 		},
 		{
+			code: 'ENG',
 			name: 'Inglaterra',
 			mp: 0,
 			w: 0,
@@ -41,6 +44,7 @@
 			pts: 0
 		},
 		{
+			code: 'ESP',
 			name: 'España',
 			mp: 0,
 			w: 0,
@@ -52,6 +56,7 @@
 			pts: 0
 		},
 		{
+			code: 'ITA',
 			name: 'Italia',
 			mp: 0,
 			w: 0,
@@ -63,6 +68,7 @@
 			pts: 0
 		},
 		{
+			code: 'BRA',
 			name: 'Brasil',
 			mp: 0,
 			w: 0,
@@ -74,6 +80,7 @@
 			pts: 0
 		},
 		{
+			code: 'FRA',
 			name: 'Francia',
 			mp: 0,
 			w: 0,
@@ -85,6 +92,7 @@
 			pts: 0
 		},
 		{
+			code: 'URU',
 			name: 'Uruguay',
 			mp: 0,
 			w: 0,

@@ -12,9 +12,9 @@
 </script>
 
 <div
-	class="m-auto mt-5 overflow-auto rounded-lg border p-5 text-sm text-gray-700 shadow sm:w-2/3 sm:max-w-xl"
+	class="m-auto my-6 overflow-auto rounded-lg border p-5 text-sm text-gray-700 shadow sm:w-2/3 sm:max-w-xl"
 >
-	<div class="flex justify-between pb-5">
+	<div class="flex justify-between pb-6">
 		<span> {date} </span>
 		<span> {status} </span>
 	</div>
@@ -29,7 +29,7 @@
 					src={home.code !== 'ESP' ? `/${home.code}.webp` : `/${home.code}.jpg`}
 				/>
 			</div>
-			<p class="whitespace-nowrap">{home.name}</p>
+			<p class="whitespace-nowrap mt-1">{home.name}</p>
 		</div>
 		<div class="mb-5 flex basis-1/3 justify-between text-3xl font-medium text-black">
 			<div>{homeGoals}</div>
@@ -46,11 +46,11 @@
 					src={away.code !== 'ESP' ? `/${away.code}.webp` : `/${away.code}.jpg`}
 				/>
 			</div>
-			<p class="whitespace-nowrap">{away.name}</p>
+			<p class="mt-1 whitespace-nowrap">{away.name}</p>
 		</div>
 	</div>
 	<!-- {#if goals.length > 0} -->
-	<hr class="pt-5" />
+	<hr class="mt-5" />
 	<div class="flex justify-between pt-5">
 		<div>
 			<ul>

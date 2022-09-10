@@ -34,7 +34,7 @@
 			{away.name}
 		</div>
 	</div>
-	<div class="hidden md:flex flex-col w-28 h-20 justify-center items-center border-l">
+	<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 		<div>Sáb, 10/9</div>
 		<div>07:30</div>
 	</div>

@@ -2,9 +2,14 @@ import prisma from '$lib/prisma';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const teamId = parseInt(params.tid);
-	const players = await prisma.player.findMany({
-		where: { teamId }
+	const id = parseInt(params.tid);
+	const team = await prisma.team.findUnique({
+		where: { id },
+		select: {
+			name: true,
+			code: true,
+			players: true
+		}
 	});
-	return { players };
+	return { team };
 };

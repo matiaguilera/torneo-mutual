@@ -20,10 +20,21 @@
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-gray-200">
-				{#each standings as { name, mp, w, d, l, gf, ga, gd, pts }, i}
+				{#each standings as { code, name, mp, w, d, l, gf, ga, gd, pts }, i}
 					<tr>
 						<td class="hidden sm:table-cell w-10">{i + 1}</td>
-						<td class="text-left px-4 py-2">{name}</td>
+						<td class="text-left px-4 py-2"
+							><div class="flex items-center">
+								<img
+									class="mr-2"
+									width={24}
+									height={24}
+									src={`/${code}.${code !== 'ESP' ? 'webp' : 'jpg'}`}
+									alt="Escudo del equipo"
+								/>
+								{name}
+							</div>
+						</td>
 						<td class="hidden sm:table-cell w-10">{mp}</td>
 						<td class="w-10">{w}</td>
 						<td class="w-10">{d}</td>

@@ -5,10 +5,12 @@
 	let { teams } = data;
 </script>
 
-<div class="py-8 w-full">
-	<div class="md:flex flex-wrap items-center justify-center">
-		{#each teams as { id: tid, name, code }}
-			<TeamItem {tid} {name} {code} />
-		{/each}
+<div class="flex justify-center">
+	<div class="sm:py-6 w-full max-w-5xl">
+		<div class="flex flex-wrap items-center justify-center">
+			{#each teams as { id: tid, name, code }}
+				<TeamItem {tid} {name} {code} />
+			{/each}
+		</div>
 	</div>
 </div>

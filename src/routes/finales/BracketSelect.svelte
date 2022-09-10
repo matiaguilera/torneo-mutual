@@ -1,5 +1,5 @@
 <div class="flex justify-center">
-	<div class="flex md:w-96 mt-10">
+	<div class="flex md:w-96 sm:mt-10 mt-4">
 		<button
 			type="button"
 			class="w-full border-l border-t border-b text-base rounded-l-md text-gray-600 bg-white hover:bg-gray-100 px-4 py-2"
