@@ -44,7 +44,7 @@
 
 	{#if showOptions}
 		<ul
-			class="absolute w-full py-1 mt-1 text-base bg-white rounded-md shadow-md border border-gray-200 z-10"
+			class="absolute w-full py-1 mt-1 text-base bg-white rounded-md shadow-md border border-gray-200 z-30"
 		>
 			{#each tags as tag, index}
 				<li

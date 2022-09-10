@@ -10,7 +10,7 @@
 	});
 
 	const tags = [
-		{ name: 'Información', url: '/' },
+		{ name: 'Inicio', url: '/' },
 		{ name: 'Equipos', url: '/equipos' },
 		{ name: 'Partidos', url: '/partidos' },
 		{ name: 'Clasificación', url: '/clasificacion' },

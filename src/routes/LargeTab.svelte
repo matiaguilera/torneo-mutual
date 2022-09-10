@@ -5,21 +5,18 @@
 	};
 </script>
 
-<div class="xl:w-full h-12 hidden sm:flex px-5 shadow">
-	{#each tags as tag, index}
-		<a
-			href={tag.url}
-			on:click={(e) => handleClick(index)}
-			class={`${
-				index === selected ? 'text-slate-700' : 'text-gray-600 py-3 hover:text-slate-700'
-			} text-sm mx-6 py-3 z-10`}
-		>
-			<div class="flex items-center mb-3">
-				<span class="ml-1 font-normal">{tag.name}</span>
-			</div>
-			{#if index === selected}
-				<div class="w-full h-1 bg-slate-700 rounded-t-md" />
-			{/if}
-		</a>
-	{/each}
+<div class="relative z-20">
+	<div class="hidden sm:flex justify-center items-center text-sm h-12 z-30 shadow">
+		{#each tags as { name, url }, index}
+			<a
+				href={url}
+				on:click={(e) => handleClick(index)}
+				class={`${
+					index === selected && 'border-b-2 border-slate-700'
+				} w-36 hover:bg-slate-100 hover:text-slate-700 text-slate-600 h-full flex items-center justify-center cursor-pointer`}
+			>
+				{name}
+			</a>
+		{/each}
+	</div>
 </div>
