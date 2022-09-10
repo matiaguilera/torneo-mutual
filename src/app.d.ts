@@ -52,6 +52,7 @@ interface LeagueForMatches extends League {
 }
 
 type Standing = {
+	code: string;
 	name: string;
 	mp: number;
 	w: number;
