@@ -24,14 +24,14 @@
 					<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
 						<div class="rounded-md shadow">
 							<a
-								href="/"
+								href="/partidos/reglamento"
 								class="flex w-full items-center justify-center rounded-md border border-transparent bg-slate-600 px-8 py-3 text-base font-medium text-white hover:bg-slate-700 md:py-4 md:px-10 md:text-lg"
 								>Reglamento</a
 							>
 						</div>
 						<div class="mt-3 sm:mt-0 sm:ml-3">
 							<a
-								href="/"
+								href="/partidos"
 								class="flex w-full items-center justify-center rounded-md border border-transparent bg-slate-100 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-200 md:py-4 md:px-10 md:text-lg"
 								>Próximos partidos</a
 							>
