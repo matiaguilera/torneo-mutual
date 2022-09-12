@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
 
-	export let id: number, home: Team, away: Team;
+	// export let id: number, home: Team, away: Team;
+	export let home: Team, away: Team;
 </script>
 
-<div
+<!-- <div
 	on:click={() => goto(`/partidos/${id}`)}
 	class="flex justify-between items-center h-28 sm:w-96 w-screen cursor-pointer border hover:bg-gray-100 overflow-auto"
->
+> -->
+<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
 	<div class="flex flex-col justify-center">
 		<div class="flex h-8">
 			<div class="flex h-8 w-16 justify-center">
