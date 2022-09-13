@@ -70,7 +70,7 @@
 			<li>Todos contra todos, una vuelta.</li>
 			<li>3 puntos por victoria, 1 por empate y 0 por derrota.</li>
 			<li>En caso de puntos iguales se tendrá en cuenta la diferencia de gol.</li>
-			<li>Si se mantiene la igualdad habrá partido extra.</li>
+			<li>Si se mantiene la igualdad habrá confronto directo.</li>
 			<li>En última instancia se recurrirán a los penales.</li>
 		</ul>
 		<h3 class="font-medium mt-3 mb-2">1.1) <span class="underline">Segunda fase</span></h3>
