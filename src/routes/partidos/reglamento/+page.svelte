@@ -69,18 +69,11 @@
 		<ul class="list-disc ml-8">
 			<li>Todos contra todos, una vuelta.</li>
 			<li>3 puntos por victoria, 1 por empate y 0 por derrota.</li>
-			<li>
-				Serán motivos de pérdida de puntos:
-				<ul>
-					<li>- Deudas en la tesorería.</li>
-					<li>- No presentarse debidamente uniformado.</li>
-				</ul>
-			</li>
 			<li>En caso de puntos iguales se tendrá en cuenta la diferencia de gol.</li>
 			<li>Si se mantiene la igualdad será confronto directo.</li>
 			<li>En última instancia se recurrirán a los penales.</li>
 		</ul>
-		<h3 class="font-medium mt-3 mb-2">1.1) <span class="underline">Segunda fase</span></h3>
+		<h3 class="font-medium mt-3 mb-2">1.2) <span class="underline">Segunda fase</span></h3>
 		<h4 class="underline my-1">Llave Oro</h4>
 		<h5>Semifinales</h5>
 		<ul class="list-disc ml-8">
@@ -108,11 +101,11 @@
 			<li>Serán ejecutados 5 penales por equipo en cualquiera de las definiciones.</li>
 		</ul>
 
-		<h2 class="text-2xli font-semibold mt-3 mb-2">2) UNIFORMES</h2>
+		<h2 class="text-2xli font-semibold mt-3 mb-2">3) UNIFORMES</h2>
 		<ul class="list-disc ml-8">
 			<li>Iguales y del país correspondiente (incluido el arquero).</li>
 		</ul>
-		<h2 class="text-2xli font-semibold mt-3 mb-2">3) ABONOS Y MULTAS</h2>
+		<h2 class="text-2xli font-semibold mt-3 mb-2">4) ABONOS Y MULTAS</h2>
 		<ul class="list-disc ml-8">
 			<li>Inscripción: 250mil (máximo hasta la 3era fecha).</li>
 			<li>Cada atleta abona 15mil por partido</li>
@@ -120,17 +113,26 @@
 			<li>Tarjeta azul: 20mil.</li>
 			<li>Tarjeta roja: 50mil, suspensión 1 partido con estudio previo.</li>
 			<li>Protesta: 250mil en la mesa al terminar el partido</li>
-			<li>Deuda en la secretaria deuda de punto.</li>
 		</ul>
-		<h2 class="text-2xli font-semibold mt-3 mb-2">4) OTRAS INDICACIONES</h2>
+		<h2 class="text-2xli font-semibold mt-3 mb-2">5) SANCIONES</h2>
+		<ul class="list-disc ml-8">
+			<li>
+				Serán motivos de pérdida de puntos:
+				<ul>
+					<li>- Deudas en la tesorería.</li>
+					<li>- No presentarse debidamente uniformado.</li>
+				</ul>
+			</li>
+			<li>
+				En caso de agresiones dentro de un encuentro los involucrados serán expulsados del torneo.
+			</li>
+		</ul>
+		<h2 class="text-2xli font-semibold mt-3 mb-2">6) OTRAS INDICACIONES</h2>
 		<ul class="list-disc ml-8">
 			<li>Tarjeta roja: el equipo se queda con un hombre menos.</li>
 			<li>Tarjeta azul: cambio directo.</li>
 			<li>5 minutos de tolerancia en el primer partido.</li>
 			<li>La última fecha se modifica según la importancia el partido.</li>
-			<li>
-				En caso de agresiones dentro de un encuentro los involucrados serán expulsados del torneo.
-			</li>
 		</ul>
 	</div>
 </div>
