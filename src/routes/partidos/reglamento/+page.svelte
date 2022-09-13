@@ -70,7 +70,7 @@
 			<li>Todos contra todos, una vuelta.</li>
 			<li>3 puntos por victoria, 1 por empate y 0 por derrota.</li>
 			<li>En caso de puntos iguales se tendrá en cuenta la diferencia de gol.</li>
-			<li>Si se mantiene la igualdad habrá confronto directo.</li>
+			<li>Si se mantiene la igualdad será confronto directo.</li>
 			<li>En última instancia se recurrirán a los penales.</li>
 		</ul>
 		<h3 class="font-medium mt-3 mb-2">1.1) <span class="underline">Segunda fase</span></h3>
@@ -98,6 +98,7 @@
 		<ul class="list-disc ml-8">
 			<li>3 pasos del punto penal.</li>
 			<li>Mano del arquero fuera del área, tiro libre a 5 pasos del punto penal.</li>
+			<li>Serán ejecutados 5 penales por equipo en cualquiera de las definiciones.</li>
 		</ul>
 
 		<h2 class="text-2xli font-semibold mt-3 mb-2">2) UNIFORMES</h2>
