@@ -69,6 +69,13 @@
 		<ul class="list-disc ml-8">
 			<li>Todos contra todos, una vuelta.</li>
 			<li>3 puntos por victoria, 1 por empate y 0 por derrota.</li>
+			<li>
+				Serán motivos de pérdida de puntos:
+				<ul>
+					<li>- Deudas en la tesorería.</li>
+					<li>- No presentarse debidamente uniformado.</li>
+				</ul>
+			</li>
 			<li>En caso de puntos iguales se tendrá en cuenta la diferencia de gol.</li>
 			<li>Si se mantiene la igualdad será confronto directo.</li>
 			<li>En última instancia se recurrirán a los penales.</li>
@@ -121,6 +128,9 @@
 			<li>Tarjeta azul: cambio directo.</li>
 			<li>5 minutos de tolerancia en el primer partido.</li>
 			<li>La última fecha se modifica según la importancia el partido.</li>
+			<li>
+				En caso de agresiones dentro de un encuentro los involucrados serán expulsados del torneo.
+			</li>
 		</ul>
 	</div>
 </div>
