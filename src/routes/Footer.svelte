@@ -3,7 +3,10 @@
 		<div class="text-center">© 2022</div>
 		<div class="mt-1">
 			Desarrollado por
-			<a class="underline hover:text-primary-gray-20" href="https://www.linkedin.com/in/crabiller/">
+			<a
+				class="underline hover:text-primary-gray-20"
+				href="https://www.linkedin.com/in/matiaguilera/"
+			>
 				Matías Aguilera
 			</a>
 		</div>
