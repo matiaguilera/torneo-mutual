@@ -30,6 +30,9 @@
 		<img class="m-5 w-44 object-scale-down" src="/sponsors/4RUEDAS.jpg" alt="4 ruedas" />
 	</div>
 	<div class="px-8">
+		<img class="m-5 w-28 object-scale-down" src="/sponsors/Toretto.jpeg" alt="Toretto's Pizza" />
+	</div>
+	<div class="px-8">
 		<img class="m-5 w-28 object-scale-down" src="/sponsors/AUTENTIC.jpg" alt="Autentic" />
 	</div>
 	<img class="m-5 w-44 object-scale-down" src="/sponsors/INGENIERIA.jpg" alt="Ingeniería" />
