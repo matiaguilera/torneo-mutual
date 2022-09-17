@@ -8,6 +8,8 @@ declare namespace App {
 	// interface PublicEnv {}
 }
 
+declare module 'luxon';
+
 type League = import('@prisma/client').League;
 type Team = import('@prisma/client').Team;
 type Player = import('@prisma/client').Player;
