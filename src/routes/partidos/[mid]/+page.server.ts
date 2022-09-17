@@ -1,9 +1,10 @@
 import prisma from '$lib/prisma';
 import type { PageServerLoad } from './$types';
+import { DateTime } from 'luxon';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { mid } = params;
-	const match = await prisma.match.findUnique({
+	const formatMatch = await prisma.match.findUnique({
 		where: {
 			id: parseInt(mid)
 		},
@@ -32,5 +33,6 @@ export const load: PageServerLoad = async ({ params }) => {
 			}
 		}
 	});
+	const match = { ...formatMatch, date: DateTime.fromJSDate(formatMatch?.date).toLocaleString() };
 	return { match };
 };
