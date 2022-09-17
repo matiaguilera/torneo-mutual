@@ -2,6 +2,7 @@
 	import Standings from './Standings.svelte';
 	import Scorers from './Scorers.svelte';
 
+	//Add teams to the scorers table
 	export let data;
 
 	let { standings, scorers } = data;
@@ -108,6 +109,9 @@
 
 {#if standings.length > 0}
 	<Standings {standings} />
+	<div class="mt-10 font-medium text-gray-600 text-center text-lg">
+		<p>Goleadores</p>
+	</div>
 	<Scorers {scorers} />
 {:else}
 	<Standings standings={emptyStandings} />

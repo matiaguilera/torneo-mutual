@@ -2,7 +2,7 @@
 	export let scorers: Scorer[];
 </script>
 
-<div class="mt-10 flex justify-center overflow-auto text-center">
+<div class="my-10 flex justify-center overflow-auto text-center">
 	<div class="w-full max-w-2xl rounded-md border">
 		<table class="w-full table-auto divide-y divide-gray-200">
 			<thead>
