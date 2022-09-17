@@ -52,11 +52,13 @@
 					on:mouseout={() => (active[index] = false)}
 					on:focus={() => (active[index] = true)}
 					on:blur={() => (active[index] = false)}
-					class={`relative pl-10 ${
-						active[index] ? 'text-slate-900 bg-slate-100' : 'text-gray-900'
-					}`}
+					class={`relative ${active[index] ? 'text-slate-900 bg-slate-100' : 'text-gray-900'}`}
 				>
-					<a href={tag.url} on:click={(e) => handleClick(index)} class="block py-2 cursor-default">
+					<a
+						href={tag.url}
+						on:click={(e) => handleClick(index)}
+						class="block py-2 cursor-default pl-10"
+					>
 						<span class={`${index === selected ? 'font-medium' : 'font-normal'}`}>
 							{tag.name}
 						</span>
