@@ -1,5 +1,9 @@
 <script lang="ts">
+	import { DateTime } from 'luxon';
 	export let home: Team, away: Team, goals: GoalWithPlayer[], date: string, status: string;
+	function capitalize(string: string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 	let homeGoals = 0;
 	let awayGoals = 0;
 	goals.forEach((goal) => {
@@ -15,7 +19,17 @@
 	class="m-auto my-6 overflow-auto rounded-lg border p-5 text-sm text-gray-700 shadow sm:w-2/3 sm:max-w-xl"
 >
 	<div class="flex justify-between pb-6">
-		<span> {date} </span>
+		<span>
+			{capitalize(
+				DateTime.fromISO(date).setLocale('es').toLocaleString({
+					weekday: 'short',
+					day: 'numeric',
+					month: 'numeric',
+					hour: 'numeric',
+					minute: 'numeric'
+				})
+			)}
+		</span>
 		<span> {status} </span>
 	</div>
 	<div class="flex items-center justify-between">

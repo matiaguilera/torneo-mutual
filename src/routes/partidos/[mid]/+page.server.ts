@@ -1,12 +1,9 @@
 import prisma from '$lib/prisma';
 import type { PageServerLoad } from './$types';
 import { DateTime } from 'luxon';
-//Testing deploy
+
 export const load: PageServerLoad = async ({ params }) => {
 	const { mid } = params;
-	function capitalize(string: string) {
-		return string.charAt(0).toUpperCase() + string.slice(1);
-	}
 	const formatMatch = await prisma.match.findUnique({
 		where: {
 			id: parseInt(mid)
@@ -38,17 +35,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	});
 	const match = {
 		...formatMatch,
-		date: capitalize(
-			DateTime.fromISO(DateTime.fromJSDate(formatMatch?.date).toString())
-				.setLocale('es')
-				.toLocaleString({
-					weekday: 'short',
-					day: 'numeric',
-					month: 'numeric',
-					hour: 'numeric',
-					minute: 'numeric'
-				})
-		)
+		date: DateTime.fromJSDate(formatMatch?.date).toString()
 	};
 	return { match };
 };
