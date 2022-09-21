@@ -2,9 +2,14 @@ import prisma from '$lib/prisma';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-	const scorers: Scorer[] =
-		await prisma.$queryRaw`SELECT "Player".id, name, "lastName", sum(quantity)::smallint FROM "Player" INNER JOIN "Goal" ON "Player".id = "Goal"."playerId" WHERE "Player"."leagueId" = 1 GROUP BY "Player".id HAVING sum(quantity) > 0 ORDER BY sum(quantity) DESC, name ASC, "lastName" ASC;`;
-
+	const scorers: Scorer[] = await prisma.$queryRaw`
+    SELECT scorers.id, "Team".code, scorers.name, scorers."lastName", sum FROM 
+    (SELECT "Player".id, name, "lastName", "Player"."teamId", sum(quantity)::smallint FROM "Player" INNER JOIN "Goal" ON "Player".id = "Goal"."playerId" WHERE "Player"."leagueId" = 1 GROUP BY "Player".id HAVING sum(quantity) > 0 ORDER BY sum(quantity) DESC, name ASC, "lastName" ASC)
+    scorers
+    INNER JOIN
+    "Team"
+    ON
+    "Team".id = scorers."teamId";`;
 	const standings: Standing[] =
 		await prisma.$queryRaw`SELECT name, code, mp::smallint, w::smallint, l::smallint, d::smallint, gf::smallint, ga::smallint, gd::smallint, pts::smallint FROM
   (SELECT 

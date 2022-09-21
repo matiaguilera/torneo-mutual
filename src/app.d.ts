@@ -67,6 +67,7 @@ type Standing = {
 };
 
 type Scorer = {
+	code: string;
 	name: string;
 	lastName: string;
 	sum: number;
