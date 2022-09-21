@@ -1,7 +1,7 @@
 import prisma from '$lib/prisma';
 import type { PageServerLoad } from './$types';
 import { DateTime } from 'luxon';
-
+//Testing deploy
 export const load: PageServerLoad = async ({ params }) => {
 	const { mid } = params;
 	function capitalize(string: string) {
