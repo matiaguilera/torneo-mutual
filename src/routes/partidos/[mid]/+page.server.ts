@@ -4,6 +4,9 @@ import { DateTime } from 'luxon';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { mid } = params;
+	function capitalize(string: string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 	const formatMatch = await prisma.match.findUnique({
 		where: {
 			id: parseInt(mid)
@@ -33,6 +36,17 @@ export const load: PageServerLoad = async ({ params }) => {
 			}
 		}
 	});
-	const match = { ...formatMatch, date: DateTime.fromJSDate(formatMatch?.date).toLocaleString() };
+	const match = {
+		...formatMatch,
+		date: capitalize(
+			DateTime.fromJSDate(formatMatch?.date).setLocale('es').toLocaleString({
+				weekday: 'short',
+				day: 'numeric',
+				month: 'numeric',
+				hour: 'numeric',
+				minute: 'numeric'
+			})
+		)
+	};
 	return { match };
 };

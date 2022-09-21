@@ -49,30 +49,47 @@
 			<p class="mt-1 whitespace-nowrap">{away.name}</p>
 		</div>
 	</div>
-	<!-- {#if goals.length > 0} -->
-	<hr class="mt-5" />
-	<div class="flex justify-between pt-5">
-		<div>
-			<ul>
-				<li>Luke Thomas</li>
-				<li>Moisés Caicedo</li>
-				<li>Leandro Trossard</li>
-			</ul>
+	{#if goals.length > 0}
+		<hr class="mt-5" />
+		<div class="flex justify-between pt-5">
+			<div class="basis-2/5">
+				<ul>
+					{#each goals as { player: { name, lastName, teamId }, quantity }}
+						{#if teamId === home.id}
+							<li>
+								{name}
+								{lastName}
+								{#if quantity > 1}
+									({quantity})
+								{/if}
+							</li>
+						{/if}
+					{/each}
+				</ul>
+			</div>
+			<div class="basis-1/5 flex justify-center items-start">
+				<img
+					width={24}
+					height={24}
+					alt="Ilustración de pelota de fútbol"
+					src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
+				/>
+			</div>
+			<div class="basis-2/5">
+				<ul class="text-right">
+					{#each goals as { player: { name, lastName, teamId }, quantity }}
+						{#if teamId === away.id}
+							<li>
+								{name}
+								{lastName}
+								{#if quantity > 1}
+									({quantity})
+								{/if}
+							</li>
+						{/if}
+					{/each}
+				</ul>
+			</div>
 		</div>
-		<div>
-			<img
-				width={24}
-				height={24}
-				alt="Ilustración de pelota de fútbol"
-				src="https://ssl.gstatic.com/onebox/sports/soccer_timeline/soccer-ball-retina.png"
-			/>
-		</div>
-		<div>
-			<ul class="text-right">
-				<li>Kalechi Iheanacho</li>
-				<li>Patson Daka</li>
-			</ul>
-		</div>
-	</div>
-	<!-- {/if} -->
+	{/if}
 </div>
