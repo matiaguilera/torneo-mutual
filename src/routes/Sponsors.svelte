@@ -12,5 +12,6 @@
 	<div class="px-8">
 		<img class="m-5 w-28 object-scale-down" src="/sponsors/AUTENTIC.jpg" alt="Autentic" />
 	</div>
+	<img class="m-5 w-44 object-scale-down" src="/sponsors/VN.jpeg" alt="VN" />
 	<img class="m-5 w-44 object-scale-down" src="/sponsors/INGENIERIA.jpg" alt="Ingeniería" />
 </div>
