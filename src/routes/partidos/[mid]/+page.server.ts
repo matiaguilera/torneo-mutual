@@ -39,13 +39,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	const match = {
 		...formatMatch,
 		date: capitalize(
-			DateTime.fromJSDate(formatMatch?.date).setLocale('es').toLocaleString({
-				weekday: 'short',
-				day: 'numeric',
-				month: 'numeric',
-				hour: 'numeric',
-				minute: 'numeric'
-			})
+			DateTime.fromISO(DateTime.fromJSDate(formatMatch?.date).toString())
+				.setLocale('es')
+				.toLocaleString({
+					weekday: 'short',
+					day: 'numeric',
+					month: 'numeric',
+					hour: 'numeric',
+					minute: 'numeric'
+				})
 		)
 	};
 	return { match };
