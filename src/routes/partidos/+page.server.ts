@@ -11,7 +11,13 @@ export const load: PageServerLoad = async () => {
 		include: {
 			home: true,
 			away: true,
-			goals: true
+			goals: {
+				where: {
+					quantity: {
+						gt: 0
+					}
+				}
+			}
 		}
 	});
 	const matches = formatMatches.map((match) => {
