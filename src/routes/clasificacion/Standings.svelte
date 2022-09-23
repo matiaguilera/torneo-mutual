@@ -11,8 +11,8 @@
 					<th class="text-left px-4 font-semibold py-2">Equipo</th>
 					<th class="hidden sm:table-cell font-semibold">PJ</th>
 					<th class="font-semibold">G</th>
-					<th class="font-semibold">P</th>
 					<th class="font-semibold">E</th>
+					<th class="font-semibold">P</th>
 					<th class="hidden sm:table-cell font-semibold">GF</th>
 					<th class="hidden sm:table-cell font-semibold ">GC</th>
 					<th class="font-semibold">DG</th>
