@@ -82,34 +82,12 @@
 				<div class="flex">
 					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 						<div>jue, 1/12</div>
-						<div>19:30</div>
+						<div>20:30</div>
 					</div>
 				</div>
 			</div>
 			<div class="md:col-span-2 bg-slate-100 border-y">
 				<p class="text-black pl-2">Segunda vuelta</p>
-			</div>
-			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
-				<div class="flex flex-col justify-center">
-					<div class="flex h-8 items-center">
-						<div class="flex h-8 w-16 justify-center">
-							<img class="py-2" src="/ENG.webp" alt="Escudo del equipo" width={24} height={24} />
-						</div>
-						Inglaterra
-					</div>
-					<div class="flex h-8 items-center">
-						<div class="flex h-8 w-16 justify-center">
-							<img class="py-2" src="/URU.webp" alt="Escudo del equipo" width={24} height={24} />
-						</div>
-						Uruguay
-					</div>
-				</div>
-				<div class="flex">
-					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
-						<div>jue, 8/12</div>
-						<div>19:00</div>
-					</div>
-				</div>
 			</div>
 			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
 				<div class="flex flex-col justify-center">
@@ -129,7 +107,29 @@
 				<div class="flex">
 					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 						<div>jue, 8/12</div>
-						<div>19:30</div>
+						<div>19:00</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
+				<div class="flex flex-col justify-center">
+					<div class="flex h-8 items-center">
+						<div class="flex h-8 w-16 justify-center">
+							<img class="py-2" src="/ENG.webp" alt="Escudo del equipo" width={24} height={24} />
+						</div>
+						Inglaterra
+					</div>
+					<div class="flex h-8 items-center">
+						<div class="flex h-8 w-16 justify-center">
+							<img class="py-2" src="/URU.webp" alt="Escudo del equipo" width={24} height={24} />
+						</div>
+						Uruguay
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
+						<div>jue, 8/12</div>
+						<div>20:30</div>
 					</div>
 				</div>
 			</div>
@@ -155,7 +155,7 @@
 				<div class="flex">
 					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 						<div>jue, 1/12</div>
-						<div>19:00</div>
+						<div>19:30</div>
 					</div>
 				</div>
 			</div>
@@ -177,34 +177,12 @@
 				<div class="flex">
 					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 						<div>jue, 1/12</div>
-						<div>19:30</div>
+						<div>20:00</div>
 					</div>
 				</div>
 			</div>
 			<div class="md:col-span-2 bg-slate-100 border-y">
 				<p class="text-black pl-2">Segunda vuelta</p>
-			</div>
-			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
-				<div class="flex flex-col justify-center">
-					<div class="flex h-8 items-center">
-						<div class="flex h-8 w-16 justify-center">
-							<img class="py-2" src="/GER.webp" alt="Escudo del equipo" width={24} height={24} />
-						</div>
-						Alemania
-					</div>
-					<div class="flex h-8 items-center">
-						<div class="flex h-8 w-16 justify-center">
-							<img class="py-2" src="/ITA.webp" alt="Escudo del equipo" width={24} height={24} />
-						</div>
-						Italia
-					</div>
-				</div>
-				<div class="flex">
-					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
-						<div>jue, 8/12</div>
-						<div>19:00</div>
-					</div>
-				</div>
 			</div>
 			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
 				<div class="flex flex-col justify-center">
@@ -225,6 +203,28 @@
 					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
 						<div>jue, 8/12</div>
 						<div>19:30</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-between items-center h-28 sm:w-96 w-screen border overflow-auto">
+				<div class="flex flex-col justify-center">
+					<div class="flex h-8 items-center">
+						<div class="flex h-8 w-16 justify-center">
+							<img class="py-2" src="/GER.webp" alt="Escudo del equipo" width={24} height={24} />
+						</div>
+						Alemania
+					</div>
+					<div class="flex h-8 items-center">
+						<div class="flex h-8 w-16 justify-center">
+							<img class="py-2" src="/ITA.webp" alt="Escudo del equipo" width={24} height={24} />
+						</div>
+						Italia
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex flex-col w-28 h-20 justify-center items-center border-l">
+						<div>jue, 8/12</div>
+						<div>20:00</div>
 					</div>
 				</div>
 			</div>
