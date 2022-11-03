@@ -6,9 +6,9 @@ export const load: PageServerLoad = async () => {
 	const formatMatches = await prisma.match.findMany({
 		where: {
 			leagueId: 1,
-			matchday: { gt: 0 }
+			OR: [{ matchday: -1 }, { matchday: -2 }]
 		},
-		orderBy: [{ matchday: 'asc' }, { date: 'asc' }],
+		orderBy: [{ date: 'asc' }],
 		include: {
 			home: true,
 			away: true,
