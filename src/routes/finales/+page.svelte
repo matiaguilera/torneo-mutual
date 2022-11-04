@@ -2,8 +2,6 @@
 	import MatchCard from '../partidos/MatchCard.svelte';
 	export let data;
 
-	//Charge data and test
-
 	let { matches } = data;
 </script>
 

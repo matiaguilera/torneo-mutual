@@ -1,10 +1,11 @@
 <script lang="ts">
 	import StaticStandings from './StaticStandings.svelte';
+	import LeastBeated from './LeastBeated.svelte';
 	import Scorers from './Scorers.svelte';
 
 	export let data;
 
-	let { scorers } = data;
+	let { scorers, teams } = data;
 
 	// const emptyStandings = [
 	// 	{
@@ -107,7 +108,11 @@
 </script>
 
 <StaticStandings />
-<div class="mt-10 font-medium text-gray-600 text-center text-lg">
+<div class="mt-10 -mb-3 font-medium text-gray-600 text-center text-lg">
+	<p>Menos goleados</p>
+</div>
+<LeastBeated {teams} />
+<div class="mt-10 -mb-3 font-medium text-gray-600 text-center text-lg">
 	<p>Goleadores</p>
 </div>
 <Scorers {scorers} />
