@@ -21,10 +21,13 @@
 				</div>
 			{/if}
 			<div
-				class={`border-t-4 md:border-l-4 md:border-t-0 w-min ${
-					matchday === -1 ? 'border-yellow-500' : 'border-gray-400'
-				}`}
+				class={`md:border-l-4 w-min ${matchday === -1 ? 'border-yellow-500' : 'border-gray-400'}`}
 			>
+				<div
+					class={`md:hidden h-1 w-full bg-gradient-to-r from-yellow-300 to-yellow-200 z-10 animate-pulse ${
+						matchday === -1 ? 'from-yellow-300 to-yellow-200' : 'from-gray-300 to-gray-200'
+					}`}
+				/>
 				<MatchCard {id} {home} {away} {date} {status} {goals} />
 			</div>
 		{/each}
