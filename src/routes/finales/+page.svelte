@@ -24,8 +24,8 @@
 				class={`md:border-l-4 w-min ${matchday === -1 ? 'border-yellow-500' : 'border-gray-400'}`}
 			>
 				<div
-					class={`md:hidden h-1 w-full bg-gradient-to-r from-yellow-300 to-yellow-200 z-10 animate-pulse ${
-						matchday === -1 ? 'from-yellow-300 to-yellow-200' : 'from-gray-300 to-gray-200'
+					class={`md:hidden h-1 w-full bg-gradient-to-r z-10 ${
+						matchday === -1 ? 'from-yellow-300 to-yellow-100' : 'from-gray-200 to-gray-100'
 					}`}
 				/>
 				<MatchCard {id} {home} {away} {date} {status} {goals} />
