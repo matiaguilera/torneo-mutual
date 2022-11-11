@@ -18,11 +18,13 @@
 					<p class="text-black pl-2">Segunda vuelta</p>
 				</div>
 			{:else if index === 8}
-				<h3 class="col-span-2 text-gray-600 font-medium text-lg text-center mt-4">Finales</h3>
+				<h3 class="col-span-2 text-gray-600 font-medium text-lg text-center mt-4">
+					Finales y Tercer Puesto
+				</h3>
 				<div class="md:col-span-2 bg-slate-100 border-y">
 					<p class="text-black pl-2">Primera vuelta</p>
 				</div>
-			{:else if index === 10}
+			{:else if index === 12}
 				<div class="md:col-span-2 bg-slate-100 border-y">
 					<p class="text-black pl-2">Segunda vuelta</p>
 				</div>
