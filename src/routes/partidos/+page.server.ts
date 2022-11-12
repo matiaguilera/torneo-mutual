@@ -26,3 +26,5 @@ export const load: PageServerLoad = async () => {
 	});
 	return { matches };
 };
+
+export const prerender = true;
