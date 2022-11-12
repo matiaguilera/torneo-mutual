@@ -13,3 +13,5 @@ export const load: PageServerLoad = async ({ params }) => {
 	});
 	return { team };
 };
+
+export const prerender = true;

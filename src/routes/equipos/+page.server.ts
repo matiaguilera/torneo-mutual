@@ -7,3 +7,5 @@ export const load: PageServerLoad = async () => {
 	});
 	return { teams };
 };
+
+export const prerender = true;
