@@ -39,3 +39,5 @@ export const load: PageServerLoad = async ({ params }) => {
 	};
 	return { match };
 };
+
+export const prerender = true;
